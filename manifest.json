@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Better Youtube Blocking",
+    "version": "0.0.1",
+    "content_scripts": [
+       {
+         "matches": [
+             "http://youtube.com/*",
+             "https://youtube.com/*",
+             "http://www.youtube.com/*",
+             "https://www.youtube.com/*"
+         ],
+        "js": ["content.js"]
+       }
+    ]
+}
