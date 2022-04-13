@@ -1,0 +1,16 @@
+* Better Youtube Blocking
+
+** Rationale
+
+Unfortunately, youtube does not provide good tools for filtering the
+content shown in the recommended feed. There is a "don't recommend
+this channel" option, but it is only availible after I have already
+been recommended a video which I did not want in my feed.
+
+I'd like to be able to pre-emptively block certain chanels from
+showing up in my recommendations at all. It would also be nice to be
+able to filter recommendations by tags, keywords, video-length, and
+other fields.
+
+This is my attempt at a better solution, using a chrome extension to remove videos from the recommended feed.
+
