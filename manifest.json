@@ -2,6 +2,11 @@
     "manifest_version": 3,
     "name": "Better Youtube Blocking",
     "version": "0.0.1",
+    "permissions": [
+         "contextMenus",
+         "notifications",
+         "webNavigation"
+     ],
     "content_scripts": [
        {
          "matches": [
@@ -10,7 +15,16 @@
              "http://www.youtube.com/*",
              "https://www.youtube.com/*"
          ],
-        "js": ["content.js"]
+        "js": ["jquery.min.js", "content.js"],
+        "run_at": "document_idle"
        }
-    ]
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "action": {
+        "default_icon": "static/images/block.png",
+        "default_popup": "static/html/popup.html"
+    }
 }
