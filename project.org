@@ -1,4 +1,9 @@
-** Project Status
+:PROPERTIES:
+:GH-PROJECT: BlakeASmith/better-yt-block
+:END:
+
+
+* Project Status
 
 *** DONE Find and filter videos on page
 
@@ -10,4 +15,9 @@
     If that turns out to be infeasible, a dropdown in the popup menu
     would work as well. The dropdown should be populated with the
     channel names on the current page.
+
+*** TODO Channel names still appear when in list view
+
+    When in list view on the subscriptions page, videos do get removed
+    but the channel name heading does not get filtered.
 
