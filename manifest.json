@@ -10,12 +10,13 @@
     "content_scripts": [
        {
          "matches": [
+             "http://youtube.com",
              "http://youtube.com/*",
              "https://youtube.com/*",
              "http://www.youtube.com/*",
              "https://www.youtube.com/*"
          ],
-        "js": ["jquery.min.js", "content.js"],
+        "js": ["jquery.min.js", "rules.js", "content.js"],
         "run_at": "document_idle"
        }
     ],
