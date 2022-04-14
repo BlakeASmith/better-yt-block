@@ -13,4 +13,3 @@ able to filter recommendations by tags, keywords, video-length, and
 other fields.
 
 This is my attempt at a better solution, using a chrome extension to remove videos from the recommended feed.
-

@@ -1,0 +1,13 @@
+** Project Status
+
+*** DONE Find and filter videos on page
+
+*** TODO Add UI for users to pick channels to block
+
+    Ideally add a "Block with YT-better-blocking" option to the
+    existing YT content menu on each video.
+
+    If that turns out to be infeasible, a dropdown in the popup menu
+    would work as well. The dropdown should be populated with the
+    channel names on the current page.
+
