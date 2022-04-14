@@ -1,10 +1,9 @@
 {
     "manifest_version": 3,
     "name": "Better Youtube Blocking",
-    "version": "0.0.1",
+    "version": "0.1.0",
+    "description": "Block specific channels from appearing on your youtube page!",
     "permissions": [
-         "contextMenus",
-         "notifications",
          "webNavigation"
      ],
     "content_scripts": [
