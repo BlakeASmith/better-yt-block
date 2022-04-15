@@ -4,6 +4,7 @@ module.exports = {
    mode: "production",
    entry: {
       background: path.resolve(__dirname, "..", "src", "background.ts"),
+      content: path.resolve(__dirname, "..", "src", "content.ts" ),
    },
    output: {
       path: path.join(__dirname, "../dist"),
@@ -12,6 +13,7 @@ module.exports = {
    resolve: {
       extensions: [".ts", ".js"],
    },
+  devtool: "source-map",
    module: {
       rules: [
          {

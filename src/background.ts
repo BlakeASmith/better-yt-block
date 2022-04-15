@@ -1,6 +1,4 @@
-const strings = {
-  pageLoad: "page_load",
-};
+import strings from "./strings";
 
 /**
  * Send a message to the active tab indicating a webNavigation event.
