@@ -1,5 +1,7 @@
-import {YTVideoFeed, Video, VideoWithRenderer} from "./videos";
+import { YTVideoFeed, Video } from "./videos";
 import strings from "./strings";
+import { UI } from "./ui";
+import ReactDOM from "react-dom";
 
 let feed = new YTVideoFeed([
   "ytd-compact-video-renderer:not(.ytbb-visited)",
@@ -9,17 +11,7 @@ let feed = new YTVideoFeed([
   "ytd-compact-radio-renderer:not(.ytbb-visited)",
 ]);
 
-console.log("Running")
-
-feed.onVideoLoad(async (videoWithRenderer: VideoWithRenderer) => {
-    const {video, renderer} = videoWithRenderer
-
-    if (video.title.includes("as")){
-        console.log(video)
-        // hide the video renderer from view
-        renderer.style.display = "none"
-    }
-});
+feed.onVideoLoad(async ({ renderer }) => {});
 
 /**
  * background.js will send a message on WebNavigation. Usually, most of
@@ -34,5 +26,16 @@ chrome.runtime.onMessage.addListener((req) => {
  * will limit the polling to at most one poll per monitor refresh.
  */
 document.addEventListener("scroll", () => {
-    window.requestAnimationFrame(() => feed.pollPageForVideos());
+  window.requestAnimationFrame(() => feed.pollPageForVideos());
 });
+
+window.onload = () => {
+  const menuButtons = $("#container > #end").get(0);
+  const blockMenuButton = document.createElement("div");
+
+  menuButtons?.appendChild(
+      blockMenuButton
+  );
+
+  ReactDOM.render(<UI blocked={["Zaney"]} />, blockMenuButton);
+}
